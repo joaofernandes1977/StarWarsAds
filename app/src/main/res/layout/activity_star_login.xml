@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    layout_width="match_patent"
+
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -30,6 +40,8 @@
         android:id="@+id/email"
         style="@style/Edit_Text"
         android:drawableRight="@drawable/ic_email2"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
         android:hint="Email" android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
         app:layout_constraintStart_toStartOf="@id/conteinerComponents"
@@ -38,19 +50,54 @@
     <EditText
         android:id="@+id/senha"
         style="@style/Edit_Text"
+        android:textColor="@color/white"
         android:drawableRight="@drawable/ic_senha2"
+        android:inputType="numberPassword"
         android:hint="Senha" android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
         app:layout_constraintStart_toStartOf="@id/conteinerComponents"
         app:layout_constraintTop_toBottomOf="@id/email" 
         />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button1"
-        style="@style/Edit_Text"
-        android:hint="ENTRAR" android:textColorHint="@color/white" android:textSize="20dp"
+        android:id="@+id/enter"
+        style="@style/Button"
+        android:text="@string/enter"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/senha"
         />
+    <TextView
+        android:id="@+id/grupo"
+        android:text="@string/grupo"
+        android:textColor="@color/darkGray"
+        style="@style/Edit_Text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/enter"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conteinerComponents"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cad_nova_conta"
+        android:text="@string/criarconta"
+        android:textSize="20dp"
+        android:textColor="@color/grey11"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
