@@ -18,8 +18,8 @@ public class StarLogin extends AppCompatActivity {
 
         getSupportActionBar().hide();
         IniciarComponentes();
-
         text_tela_cadastro.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent cadastro = new Intent(StarLogin.this, StarCadastro.class);

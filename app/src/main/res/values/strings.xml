@@ -6,4 +6,6 @@
     <string name="nome">Nome</string>
     <string name="confsenha">Confirme Senha</string>
     <string name="cadastro">CADASTRAR</string>
+    <string name="bemvindo">SEJA BEM VINDO</string>
+    <string name="sair">DESLOGAR</string>
 </resources>

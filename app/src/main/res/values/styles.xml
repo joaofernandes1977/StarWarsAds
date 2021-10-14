@@ -2,12 +2,12 @@
 
 <resources>
     <style name="ContainerComponents">
-
         <item name="android:layout_width"> match_parent</item>
         <item name="android:layout_height">300dp</item>
         <item name="android:background">@drawable/container_components</item>
         <item name="android:layout_margin">20dp</item>
     </style>
+
     <style name="ContainerComponents2">
         <item name="android:layout_width"> match_parent</item>
         <item name="android:layout_height">400dp</item>
@@ -24,8 +24,8 @@
         <item name="android:layout_marginLeft">30dp</item>
         <item name="android:layout_marginRight">30dp</item>
         <item name="android:layout_marginTop">20dp</item>
-
     </style>
+
     <style name="Edit_Text_Cad">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -35,8 +35,8 @@
         <item name="android:layout_marginLeft">30dp</item>
         <item name="android:layout_marginRight">30dp</item>
         <item name="android:layout_marginTop">10dp</item>
-
     </style>
+
     <style name="Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -45,18 +45,16 @@
         <item name="android:layout_marginLeft">50dp</item>
         <item name="android:layout_marginRight">50dp</item>
         <item name="android:layout_marginTop">15dp</item>
-
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">18dp</item>
         <item name="android:textStyle">bold</item>
-
     </style>
+
     <style name="Edit_Text2">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">240dp</item>
         <item name="android:layout_marginRight">20dp</item>
         <item name="android:layout_marginTop">40dp</item>
-
     </style>
 </resources>

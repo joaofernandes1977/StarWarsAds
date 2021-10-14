@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StarWars">
         <activity
+            android:name=".StarPrincipal"
+            android:exported="true" />
+        <activity
             android:name=".StarCadastro"
             android:exported="true" />
         <activity
