@@ -85,9 +85,10 @@
         />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:layout_marginTop="10dp"
         android:indeterminateTint="@color/gold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,10 +99,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/user_teste"
-        android:text="USER TESTE"
+        android:text="ADS-2021"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

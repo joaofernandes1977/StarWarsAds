@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,9 +32,10 @@ import java.util.Map;
 public class StarCadastro extends AppCompatActivity {
 
     private TextView teste_user, edit_nome, edit_email, edit_senha, confirm_pwd;
-    private Button bt_cadastro, bt_cadastro2;
+    private Button bt_cadastro;
     String[] msg = { " PREENCHER TODOS OS CAMPOS", "Cadastro OK"};
     String userId;
+    private ProgressBar progressBar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,14 +80,19 @@ public class StarCadastro extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                if(task.isSuccessful()){
-
                    SalvarDadosUser();
-
 
                    Snackbar snackbar = Snackbar.make(vp, msg[1],Snackbar.LENGTH_LONG);
                    snackbar.setBackgroundTint(Color.WHITE);
                    snackbar.setTextColor(Color.BLACK);
                    snackbar.show();
+                   progressBar2.setVisibility(View.VISIBLE);
+                   new Handler().postDelayed(new Runnable() {
+                       @Override
+                       public void run() {
+                           TelaPrincipal2();
+                       }
+                   }, 3000);
 
 
                }else{
@@ -136,6 +144,12 @@ public class StarCadastro extends AppCompatActivity {
                 });
 
     }
+    private void TelaPrincipal2(){
+
+        Intent intent = new Intent( StarCadastro.this, StarPrincipal.class);
+        startActivity(intent);
+        finish();
+    }
     private void IniciarComponentes(){
         teste_user = findViewById(R.id.user_teste);
         edit_nome = findViewById(R.id.nome);
@@ -143,7 +157,8 @@ public class StarCadastro extends AppCompatActivity {
         edit_senha = findViewById(R.id.senhacad);
         confirm_pwd = findViewById(R.id.confirm_senhacad);
         bt_cadastro = findViewById(R.id.bt_cadastrar);
-        bt_cadastro2 = findViewById(R.id.bt_cadastrar);
+        progressBar2 = findViewById(R.id.progressBar2);
+
 
 
 
