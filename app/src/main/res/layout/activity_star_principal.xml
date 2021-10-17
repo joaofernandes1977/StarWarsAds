@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    layout_width="match_patent"
+
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -46,12 +54,12 @@
         app:layout_constraintTop_toBottomOf="@id/conteiner_user" />
 
     <TextView
-        android:id="@+id/nome_user"
+        android:id="@+id/nome_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:text="JOAO FERANDES"
+        android:layout_marginTop="46dp"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -74,12 +82,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
-        android:text="joao.fernandez.hl@gmail.com"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/ic_mail"
-        app:layout_constraintTop_toBottomOf="@id/nome_user" />
+        app:layout_constraintTop_toBottomOf="@id/nome_usuario" />
 
     <!-- <Button
         android:id="@+id/deslogar"
@@ -94,22 +102,42 @@
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/nome_mail" />
     style="@style/Button"  -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/starApi"
+        style="@style/Button"
+        android:text="@string/api"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/nome_mail"
+        app:layout_constraintTop_toBottomOf="@id/nome_mail"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/starCad"
+        style="@style/Button"
+        android:text="@string/cadastroAPI"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/starApi"
+        app:layout_constraintTop_toBottomOf="@id/starApi"
+        />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/deslogar"
         style="@style/Button"
         android:text="@string/sair"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nome_mail"
+        app:layout_constraintEnd_toEndOf="@id/starCad"
+        app:layout_constraintTop_toBottomOf="@id/starCad"
         />
     <ImageView
         android:id="@+id/yoda"
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="130dp"
         android:src="@drawable/yoda"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/deslogar" />
+        app:layout_constraintTop_toBottomOf="@id/starApi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -8,4 +8,6 @@
     <string name="cadastro">CADASTRAR</string>
     <string name="bemvindo">SEJA BEM VINDO</string>
     <string name="sair">DESLOGAR</string>
+    <string name="api">CONSULTA PERSONAGEM</string>
+    <string name="cadastroAPI">CADASTRO PERSONAGEM</string>
 </resources>
