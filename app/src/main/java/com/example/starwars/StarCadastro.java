@@ -92,7 +92,7 @@ public class StarCadastro extends AppCompatActivity {
                        public void run() {
                            TelaPrincipal2();
                        }
-                   }, 3000);
+                   }, 2000);
 
 
                }else{
