@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    layout_width="match_patent"
+
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/espacoapi"
+        tools:context=".activity.CadastroApi">
+
+        <TextView
+            android:id="@+id/cadastroApi"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="CADASTRO API"
+            android:textAlignment="center"
+            android:textColor="@color/white" android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/conteinerComponentsCad"
+            style="@style/ContainerComponents2"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastroApi" />
+        <EditText
+            android:id="@+id/id_api"
+            style="@style/Edit_Text_api"
+            android:textColor="@color/white"
+            android:hint="Id:" android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/conteinerComponentsCad"
+            app:layout_constraintStart_toStartOf="@id/conteinerComponentsCad"
+            app:layout_constraintTop_toTopOf="@id/conteinerComponentsCad" />
+        <EditText
+            android:id="@+id/nome_api"
+            style="@style/Edit_Text_api"
+            android:textColor="@color/white"
+            android:hint="Nome:" android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/conteinerComponentsCad"
+            app:layout_constraintStart_toStartOf="@id/conteinerComponentsCad"
+            app:layout_constraintTop_toBottomOf="@id/id_api" />
+        <EditText
+            android:id="@+id/url_api"
+            style="@style/Edit_Text_api"
+            android:textColor="@color/white"
+            android:hint="Url:" android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/conteinerComponentsCad"
+            app:layout_constraintStart_toStartOf="@id/conteinerComponentsCad"
+            app:layout_constraintTop_toBottomOf="@id/nome_api" />
+        <EditText
+            android:id="@+id/titulo_api"
+            style="@style/Edit_Text_api"
+            android:textColor="@color/white"
+            android:hint="Tutulo:" android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/conteinerComponentsCad"
+            app:layout_constraintStart_toStartOf="@id/conteinerComponentsCad"
+            app:layout_constraintTop_toBottomOf="@id/url_api" />
+        <EditText
+            android:id="@+id/historia_api"
+            style="@style/Edit_Text_api"
+            android:textColor="@color/white"
+            android:hint="Historia:" android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/conteinerComponentsCad"
+            app:layout_constraintStart_toStartOf="@id/conteinerComponentsCad"
+            app:layout_constraintTop_toBottomOf="@id/titulo_api" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_cadastrar_api"
+            style="@style/Button"
+            android:text="@string/cadastro"
+            android:layout_marginTop="120dp"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conteinerComponentsCad"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
