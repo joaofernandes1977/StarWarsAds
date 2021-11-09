@@ -1,6 +1,5 @@
-package com.example.starwars;
+package com.example.starwars.activity;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,8 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.starwars.adapters.UserAdapter;
-import com.example.starwars.model.User;
+import com.example.starwars.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -19,12 +17,9 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class StarPrincipal extends AppCompatActivity {
     private  TextView nomeUser, nomeEmail;
-    private Button bt_deslogar;
+    private Button bt_deslogar, bt_cadastrar, bt_fragment;
     FirebaseFirestore banco = FirebaseFirestore.getInstance();
     String userId;
     @Override
@@ -34,11 +29,30 @@ public class StarPrincipal extends AppCompatActivity {
         getSupportActionBar().hide();
         IniciaComponentes();
 
+        bt_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(StarPrincipal.this, PrincipalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         bt_deslogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(StarPrincipal.this, StarLogin.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        bt_cadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(StarPrincipal.this, CadastroApi.class);
                 startActivity(intent);
                 finish();
             }
@@ -60,10 +74,13 @@ public class StarPrincipal extends AppCompatActivity {
         });
     }
 
+
     private void IniciaComponentes(){
         nomeUser = findViewById(R.id.nome_usuario);
         nomeEmail = findViewById(R.id.nome_mail);
         bt_deslogar = findViewById(R.id.deslogar);
+        bt_cadastrar = findViewById(R.id.starCad);
+        bt_fragment = findViewById(R.id.starApi);
     }
 
 

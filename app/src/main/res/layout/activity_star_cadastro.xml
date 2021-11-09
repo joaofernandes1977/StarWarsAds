@@ -14,7 +14,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/telacadastro"
-    tools:context=".StarCadastro">
+    tools:context=".activity.StarCadastro">
 
     <ImageView
         android:id="@+id/logo"

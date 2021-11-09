@@ -1,4 +1,4 @@
-package com.example.starwars;
+package com.example.starwars.activity;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.starwars.R;
 import com.example.starwars.adapters.UserAdapter;
 import com.example.starwars.model.User;
 

@@ -1,4 +1,4 @@
-package com.example.starwars;
+package com.example.starwars.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.starwars.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,11 +32,13 @@ import java.util.Map;
 
 public class StarCadastro extends AppCompatActivity {
 
-    private TextView teste_user, edit_nome, edit_email, edit_senha, confirm_pwd;
+    private TextView edit_nome, edit_email, edit_senha, confirm_pwd;
     private Button bt_cadastro;
-    String[] msg = { " PREENCHER TODOS OS CAMPOS", "Cadastro OK"};
-    String userId;
+    String[] msg = { " PREENCHER TODOS OS CAMPOS", "Cadastro OK", "AS SENHAS DEVEM SER IGUAIS!"};
+    String userId, userId2;
     private ProgressBar progressBar2;
+
+    //FirebaseFirestore banco2 = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +56,16 @@ public class StarCadastro extends AppCompatActivity {
                 String senha = edit_senha.getText().toString();
                 String confirmasepwd = confirm_pwd.getText().toString();
 
-                if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmasepwd.isEmpty()){
+                if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmasepwd.isEmpty() ){
                     Snackbar snackbar = Snackbar.make(v, msg[0], Snackbar.LENGTH_LONG);
                     snackbar.setBackgroundTint(Color.WHITE);
                     snackbar.setTextColor(Color.BLACK);
                     snackbar.show();
-                }else {
-                    CadastrarUser(v);
-                }
+                }else{
+                        CadastrarUser(v);
+                    }
+
+
             }
         });
 
@@ -121,13 +126,20 @@ public class StarCadastro extends AppCompatActivity {
     private void SalvarDadosUser(){
         String nome = edit_nome.getText().toString();
         String email = edit_email.getText().toString();
+        String senha = edit_senha.getText().toString();
+        String confirm = confirm_pwd.getText().toString();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+
 
         Map<String,Object> usuarios = new HashMap<>();
         usuarios.put("nome",nome);
         usuarios.put("email",email);
+        usuarios.put("SENHA",senha);
+        usuarios.put("CONFIRMA SENHA", confirm);
 
         userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         DocumentReference documentReference = db.collection("Usuarios").document(userId);
         documentReference.set(usuarios).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -150,8 +162,9 @@ public class StarCadastro extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
     private void IniciarComponentes(){
-        teste_user = findViewById(R.id.user_teste);
+
         edit_nome = findViewById(R.id.nome);
         edit_email = findViewById(R.id.emailcad);
         edit_senha = findViewById(R.id.senhacad);
@@ -159,8 +172,5 @@ public class StarCadastro extends AppCompatActivity {
         bt_cadastro = findViewById(R.id.bt_cadastrar);
         progressBar2 = findViewById(R.id.progressBar2);
 
-
-
-
-        ;}
+    }
 }

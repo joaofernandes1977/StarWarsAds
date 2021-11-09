@@ -1,8 +1,10 @@
-package com.example.starwars;
+package com.example.starwars.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.starwars.R;
 
 public class MainActivity extends AppCompatActivity {
 

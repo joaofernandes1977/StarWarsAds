@@ -10,22 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StarWars">
         <activity
-            android:name=".model.User"
+            android:name=".activity.PrincipalActivity"
             android:exported="true" />
         <activity
-            android:name=".UserActivity"
+            android:name=".activity.TesteActivity"
             android:exported="true" />
         <activity
-            android:name=".StarPrincipal"
+            android:name=".activity.CadastroApi"
             android:exported="true" />
         <activity
-            android:name=".StarCadastro"
+            android:name=".activity.UserActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.StarPrincipal"
             android:exported="true" />
         <activity
-            android:name=".StarLogin"
+            android:name=".activity.StarCadastro"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.StarLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

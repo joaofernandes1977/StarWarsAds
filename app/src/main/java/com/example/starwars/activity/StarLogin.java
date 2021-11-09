@@ -1,4 +1,4 @@
-package com.example.starwars;
+package com.example.starwars.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.starwars.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
@@ -35,6 +36,9 @@ public class StarLogin extends AppCompatActivity {
 
         getSupportActionBar().hide();
         IniciarComponentes();
+
+
+
         text_tela_cadastro.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -119,5 +123,6 @@ public class StarLogin extends AppCompatActivity {
         edit_senha = findViewById(R.id.senha);
         bt_entrar = findViewById(R.id.enter);
         progressBar = findViewById(R.id.progressBar);
+
     }
 }

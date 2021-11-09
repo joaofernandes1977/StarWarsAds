@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.core.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     layout_width="match_patent"
 
     android:fillViewport="true"
@@ -10,13 +11,10 @@
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fundologin"
-    tools:context=".StarLogin">
+    tools:context=".activity.StarLogin">
 
     <TextView
         android:id="@+id/teste"
@@ -58,16 +56,16 @@
         android:hint="Senha" android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
         app:layout_constraintStart_toStartOf="@id/conteinerComponents"
-        app:layout_constraintTop_toBottomOf="@id/email" 
+        app:layout_constraintTop_toBottomOf="@id/email"
         />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/enter"
         style="@style/Button"
         android:text="@string/enter"
-        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/senha"
-        />
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/senha" />
     <TextView
         android:id="@+id/grupo"
         android:text="@string/grupo" android:textAlignment="center" android:textStyle="italic"
@@ -93,15 +91,14 @@
         android:id="@+id/cad_nova_conta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/criarconta"
-        android:textSize="20dp"
-        android:textColor="@color/grey11"
-        android:textStyle="bold"
         android:layout_marginTop="60dp"
+        android:text="@string/criarconta"
+        android:textColor="@color/grey11"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/progressBar"
-        />
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
