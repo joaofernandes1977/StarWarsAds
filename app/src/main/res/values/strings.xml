@@ -8,8 +8,31 @@
     <string name="cadastro">CADASTRAR</string>
     <string name="bemvindo">SEJA BEM VINDO</string>
     <string name="sair">DESLOGAR</string>
-    <string name="api">CONSULTA PERSONAGEM</string>
-    <string name="cadastroAPI">CADASTRO PERSONAGEM</string>
+    <string name="api">CONSULTA API</string>
+    <string name="cadastroAPI">CADASTRO API</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_principal_drawer_nav">PrincipalDrawerNav</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_extras">--- Extras GRUPO1 ADS ---</string>
+    <string name="menu_sair_app">--- Sair APP ---</string>
+
+
+    <string name="menu_principal">Principal</string>
+    <string name="menu_cadastro">Cadastro API</string>
+    <string name="menu_consulta">Consulta API</string>
+    <string name="menu_filmes">Lista Filmes</string>
+    <string name="menu_avatares">Lista Avatares</string>
+    <string name="menu_trailer">Trailers Star Wars</string>
+
+
+    <string name="menu_desenvolvimento">Desenvolvimento</string>
+    <string name="menu_agradecimento">Agradecimento</string>
+    <string name="menu_contato">Contato</string>
+    <string name="menu_sair">SAIR</string>
 </resources>

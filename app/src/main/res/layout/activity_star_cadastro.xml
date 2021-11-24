@@ -14,7 +14,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/telacadastro"
-    tools:context=".activity.StarCadastro">
+    tools:context=".activityview.StarCadastro">
 
     <ImageView
         android:id="@+id/logo"
@@ -63,17 +63,7 @@
         app:layout_constraintStart_toStartOf="@id/conteinerComponentsCad"
         app:layout_constraintTop_toBottomOf="@id/emailcad"
         />
-    <EditText
-        android:id="@+id/confirm_senhacad"
-        style="@style/Edit_Text_Cad"
-        android:textColor="@color/white"
-        android:drawableRight="@drawable/ic_senha2"
-        android:inputType="numberPassword"
-        android:hint="Confirme Senha" android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/conteinerComponentsCad"
-        app:layout_constraintStart_toStartOf="@id/conteinerComponentsCad"
-        app:layout_constraintTop_toBottomOf="@id/senhacad"
-        />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_cadastrar"
@@ -81,7 +71,7 @@
         android:text="@string/cadastro"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/confirm_senhacad"
+        app:layout_constraintTop_toBottomOf="@id/senhacad"
         />
 
     <ProgressBar

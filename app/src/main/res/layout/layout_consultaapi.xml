@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fundodark"
-    tools:context="com.example.starwars.activity.PrincipalActivity">
+    tools:context="com.example.starwars.activityview.StarPrincipalFragments">
 
     <Button
         android:id="@+id/btnStarships"

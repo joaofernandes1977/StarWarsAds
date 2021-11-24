@@ -12,8 +12,14 @@
     <color name="grey31">#4F4F4F</color>
     <color name="DarkBlue">#00008B</color>
     <color name="DeepSkyBlue">#00BFFF</color>
-    <color name="Magenta">#FF00FF</color>
-    <color name="gold">	#FFD700</color>
+    <color name="Silver">#C0C0C0</color>
+    <color name="gold">#FFD700</color>
+
+    <color name="LightBlue">#ADD8E6</color>
+    <color name="LightCyan">#E0FFFF</color>
+    <color name="Honeydew">#F0FFF0</color>
+
+
 
 
 </resources>

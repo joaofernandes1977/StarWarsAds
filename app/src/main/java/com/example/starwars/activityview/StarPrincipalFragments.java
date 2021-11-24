@@ -1,4 +1,4 @@
-package com.example.starwars.activity;
+package com.example.starwars.activityview;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -9,19 +9,18 @@ import android.widget.Button;
 
 import com.example.starwars.R;
 import com.example.starwars.fragment.CadastroapiFragment;
-import com.example.starwars.fragment.ConsultaApiFragment;
 import com.example.starwars.fragment.UserlogFragment;
 
-public class PrincipalActivity extends AppCompatActivity {
+public class StarPrincipalFragments extends AppCompatActivity {
     private Button btnovaApi, btconsultaApi, btUserlog;
     private CadastroapiFragment cadastroapiFragment;
-    private ConsultaApiFragment consultaApiFragment;
+    //private ConsultaApiFragment consultaApiFragment;
     private UserlogFragment userlogFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal);
+        setContentView(R.layout.activity_principal_fragments);
         getSupportActionBar().hide();
 
     btnovaApi = findViewById(R.id.novoPersonagem);
@@ -29,7 +28,7 @@ public class PrincipalActivity extends AppCompatActivity {
     btUserlog = findViewById(R.id.usuarioLogado);
 
     cadastroapiFragment = new CadastroapiFragment();
-    consultaApiFragment = new ConsultaApiFragment();
+    //consultaApiFragment = new ConsultaApiFragment();
     userlogFragment = new UserlogFragment();
 
     btnovaApi.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +40,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
         }
     });
+    /*
     btconsultaApi.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -49,6 +49,8 @@ public class PrincipalActivity extends AppCompatActivity {
             transaction.commit();
         }
     });
+    */
+
     btUserlog.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {

@@ -9,21 +9,45 @@
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/container_user_principal.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/container_user_redondo.xml" value="0.23072916666666668" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/edit_text.xml" value="0.1078125" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/ic_comentarios.xml" value="0.11296296296296296" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/ic_coracao.xml" value="0.18423423423423424" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/ic_email.xml" value="0.17" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/ic_senha.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/drawable/ic_senha2.xml" value="0.22972972972972974" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_cadastro_api.xml" value="0.25" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_card_view_filmes.xml" value="0.33" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_principal.xml" value="0.25" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_principal_drawer_nav.xml" value="0.25" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_principal_fragments.xml" value="0.18603603603603602" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_star_avatar.xml" value="0.33" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_star_cadastro.xml" value="0.25" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_star_deslogar.xml" value="0.18" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_star_login.xml" value="0.25" />
-        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_star_principal.xml" value="0.22" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_star_principal.xml" value="0.5" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_teste.xml" value="0.32882882882882886" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/activity_user.xml" value="0.3802083333333333" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/adapter_avatar.xml" value="0.67" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/api_result_cadastro.xml" value="0.33" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/app_bar_principal_drawer_nav.xml" value="0.22" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/button2.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/content_principal_drawer_nav.xml" value="0.5" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/filme_detalhe.xml" value="0.4144736842105263" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_cadastroapi.xml" value="0.32882882882882886" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_cadastroapi2.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_consulta_api.xml" value="0.17027027027027028" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_consultaapi.xml" value="0.32882882882882886" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_filmes.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_gallery.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_home.xml" value="0.32882882882882886" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_principal.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_slideshow.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/fragment_userlog.xml" value="0.17027027027027028" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/layout_consultaapi.xml" value="0.32882882882882886" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/nav_header_principal_drawer_nav.xml" value="0.5" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/layout/user_layout.xml" value="0.2677083333333333" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
+        <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/menu/principal_drawer_nav.xml" value="0.21621621621621623" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21302083333333333" />
         <entry key="..\:/Users/Administrador/AndroidStudioProjects/StarWars/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21302083333333333" />
       </map>

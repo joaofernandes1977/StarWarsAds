@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_principal">
+
+    <fragment
+        android:id="@+id/nav_principal"
+        android:name="com.example.starwars.ui.principal.PrincipalFragment"
+        android:label="@string/menu_principal"
+        tools:layout="@layout/fragment_principal" />
+
+    <fragment
+        android:id="@+id/nav_consulta"
+        android:name="com.example.starwars.ui.consultaapi.ConsultaapiFragment"
+        android:label="@string/menu_consulta"
+        tools:layout="@layout/fragment_consultaapi" />
+    <fragment
+        android:id="@+id/nav_listafilmes"
+        android:name="com.example.starwars.ui.filmes.FilmesFragment"
+        android:label="@string/menu_filmes"
+        tools:layout="@layout/filme_detalhe" />
+
+    <fragment
+        android:id="@+id/nav_avatares"
+        android:name="com.example.starwars.ui.avatares.AvataresFragment"
+        android:label="@string/menu_avatares"
+        tools:layout="@layout/fragment_avatares" />
+
+    <fragment
+        android:id="@+id/nav_trailer"
+        android:name="com.example.starwars.ui.trailers.TrailersFragment"
+        android:label="@string/menu_trailer"
+        tools:layout="@layout/fragment_trailers" />
+    <fragment
+        android:id="@+id/nav_desenvolvimento"
+        android:name="com.example.starwars.ui.desenvolvimento.DesenvolvimentoFragment"
+        android:label="@string/menu_desenvolvimento"
+        tools:layout="@layout/fragment_desenvolvimento" />
+    <fragment
+        android:id="@+id/nav_agradecimento"
+        android:name="com.example.starwars.ui.agradecimento.AgradecimentoFragment"
+        android:label="@string/menu_agradecimento"
+        tools:layout="@layout/fragment_agradecimento" />
+    <fragment
+        android:id="@+id/nav_contato"
+        android:name="com.example.starwars.ui.contato.ContatoFragment"
+        android:label="@string/menu_contato"
+        tools:layout="@layout/fragment_contato" />
+    <fragment
+        android:id="@+id/nav_sair"
+        android:name="com.example.starwars.ui.sair.SairFragment"
+        android:label="@string/menu_sair"
+        tools:layout="@layout/fragment_sair" />
+    <activity
+        android:id="@+id/nav_cadastro"
+        android:name="com.example.starwars.activityview.CadastroApi"
+        android:label="CadastroApi"
+        tools:layout="@layout/activity_cadastro_api"/>
+
+
+</navigation>

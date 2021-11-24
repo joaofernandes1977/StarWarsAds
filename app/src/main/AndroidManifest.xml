@@ -10,28 +10,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StarWars">
         <activity
-            android:name=".activity.PrincipalActivity"
+            android:name=".activityview.StarAvatar"
+            android:exported="false" />
+        <activity
+            android:name=".PrincipalDrawerNav"
+            android:exported="false"
+            android:label="@string/title_activity_principal_drawer_nav"
+            android:theme="@style/Theme.StarWars.NoActionBar" />
+        <activity
+            android:name=".activityview.CardViewFilmes"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/actions" />
+
+        <activity
+            android:name=".activityview.StarPrincipalFragments"
             android:exported="true" />
         <activity
-            android:name=".activity.TesteActivity"
+            android:name=".activityview.StarResultCadastroApi"
             android:exported="true" />
         <activity
-            android:name=".activity.CadastroApi"
+            android:name=".activityview.CadastroApi"
             android:exported="true" />
         <activity
-            android:name=".activity.UserActivity"
+            android:name=".activityview.StarPrincipal"
             android:exported="true" />
         <activity
-            android:name=".activity.StarPrincipal"
+            android:name=".activityview.StarCadastro"
             android:exported="true" />
         <activity
-            android:name=".activity.StarCadastro"
+            android:name=".activityview.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.StarLogin"
+            android:name=".activityview.StarLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

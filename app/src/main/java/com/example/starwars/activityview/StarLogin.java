@@ -1,4 +1,4 @@
-package com.example.starwars.activity;
+package com.example.starwars.activityview;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,7 +36,9 @@ public class StarLogin extends AppCompatActivity {
 
         getSupportActionBar().hide();
         IniciarComponentes();
-
+        //start.personagens();
+        //TESTE DE BANCO DE DADOS
+        //reference.child("003").child("nome").setValue("dark vaider");
 
 
         text_tela_cadastro.setOnClickListener(new View.OnClickListener() {

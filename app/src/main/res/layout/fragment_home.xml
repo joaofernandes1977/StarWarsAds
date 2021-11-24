@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    layout_width="match_patent"
+
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fundogalaxia"
+        tools:context=".ui.home.HomeFragment" >
+
+        <View
+            android:id="@+id/conteiner_user"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/container_user_redondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/vader"
+            app:layout_constraintBottom_toBottomOf="@id/conteiner_user"
+            app:layout_constraintEnd_toEndOf="@id/conteiner_user"
+            app:layout_constraintStart_toStartOf="@id/conteiner_user"
+            app:layout_constraintTop_toTopOf="@id/conteiner_user" />
+
+        <View
+            android:id="@+id/conteinerComponentsCad"
+            style="@style/ContainerComponents3"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conteiner_user" />
+
+        <ImageView
+            android:id="@+id/ic_user_new"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_user2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conteiner_user" />
+
+        <TextView
+            android:id="@+id/nome_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ic_user_new"
+            app:layout_constraintTop_toBottomOf="@id/conteiner_user" />
+
+        <ImageView
+            android:id="@+id/ic_mail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_email2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_user_new" />
+
+        <TextView
+            android:id="@+id/nome_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="36dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ic_mail"
+            app:layout_constraintTop_toBottomOf="@+id/ic_user_new" />
+
+        <!-- <Button
+            android:id="@+id/deslogar"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:padding="8dp"
+            android:text="@string/sair"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/nome_mail" />
+        style="@style/Button"  -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/starApi"
+            style="@style/Button"
+            android:layout_marginTop="40dp"
+            android:text="TELA FRAGMENTS"
+            app:layout_constraintEnd_toEndOf="@id/nome_mail"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_mail" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/starCad"
+            style="@style/Button"
+            android:text="@string/cadastroAPI"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/starApi"
+            app:layout_constraintTop_toBottomOf="@id/starApi"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/consulta_card"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="lISTA DE FILMES"
+            app:layout_constraintEnd_toEndOf="@id/starCad"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/starCad" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/drawer_principal"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="DRAWER-NAVIGATION"
+            app:layout_constraintEnd_toEndOf="@id/starCad"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/consulta_card" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/avatares"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="COLECTION AVATAR"
+            app:layout_constraintEnd_toEndOf="@id/starCad"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/drawer_principal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deslogar"
+            style="@style/Button"
+            android:text="@string/sair"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/avatares"
+            app:layout_constraintTop_toBottomOf="@id/avatares"
+            />
+
+        <ImageView
+            android:id="@+id/yoda"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="180dp"
+            android:src="@drawable/yoda"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/starApi" />
+        <TextView
+            android:id="@+id/textHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home Fragment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+
+

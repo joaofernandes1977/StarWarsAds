@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.PrincipalActivity">
+    android:background="@drawable/fundogalaxia"
+    tools:context=".activityview.StarPrincipalFragments">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -72,7 +73,7 @@
         <ImageView
             android:id="@+id/yoda"
             android:layout_width="388dp"
-            android:layout_height="595dp"
+            android:layout_height="617dp"
             android:layout_gravity="center_vertical"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/scrollView2"
@@ -81,13 +82,5 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/yoda" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="210dp"
-            android:layout_height="169dp"
-            android:layout_gravity="right"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/balao" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

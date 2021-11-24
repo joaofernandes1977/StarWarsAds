@@ -1,4 +1,4 @@
-package com.example.starwars.activity;
+package com.example.starwars.activityview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
