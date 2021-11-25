@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
 import com.example.starwars.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -172,7 +173,7 @@ public class StarCadastro extends AppCompatActivity {
     }
     private void TelaPrincipal(){
 
-        Intent intent = new Intent( StarCadastro.this, StarPrincipal.class);
+        Intent intent = new Intent( StarCadastro.this, PrincipalDrawerNav.class);
         startActivity(intent);
         finish();
     }

@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -114,7 +115,7 @@ public class StarLogin extends AppCompatActivity {
 
     private void TelaPrincipal(){
 
-        Intent intent = new Intent(StarLogin.this, StarPrincipal.class);
+        Intent intent = new Intent(StarLogin.this, PrincipalDrawerNav.class);
         startActivity(intent);
         finish();
     }

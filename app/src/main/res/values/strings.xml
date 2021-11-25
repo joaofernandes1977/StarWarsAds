@@ -35,4 +35,13 @@
     <string name="menu_agradecimento">Agradecimento</string>
     <string name="menu_contato">Contato</string>
     <string name="menu_sair">SAIR</string>
+
+    <string name="saudacao">Seja bem vindo! Que a força esteja com você.</string>
+    <string name="yoda">“Você deve desaprender o que aprendeu!” Autor. Mestre Yoda</string>
+    <string name="resumo">Ficção científica? Não! Star wars é uma história de fantasia que engloba elementos batidos na literatura e no cinema, como romance, drama, humor e luta entre bem e mal. O centro da trama é uma disputa política entre um império tirano e ditatorial e um grupo libertário. O enredo é permeado pela tragédia pessoal de Anakin Skywalker, um jedi (do bem) que sucumbe ao Lado Sombrio da Força (do mal) se transformando no vilão Darth Vader, que é um dos líderes do Império Galático.</string>
+    <string name="agradecimentoprof">  MUITO OBRIGADO PROFESSOR POR TUDO QUE FOI ENSINADO! </string>
+    <string name="curso">Analise e Desenvolvimento de Sistemas</string>
+    <string name="professor">Professor: Jean Poul</string>
+    <string name="cadeira">DISPOSITIVOS MÓVEIS</string>
+    <string name="grupo1">GRUPO 1</string>
 </resources>

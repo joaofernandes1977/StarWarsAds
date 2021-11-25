@@ -20,6 +20,12 @@
         <item name="android:background">@drawable/container_components</item>
         <item name="android:layout_margin">20dp</item>
     </style>
+    <style name="ContainerComponents8">
+        <item name="android:layout_width"> match_parent</item>
+        <item name="android:layout_height">600dp</item>
+        <item name="android:background">@drawable/container_components</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
 
     <style name="Edit_Text">
         <item name="android:layout_width">match_parent</item>

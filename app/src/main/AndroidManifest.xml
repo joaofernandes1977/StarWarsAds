@@ -26,9 +26,6 @@
             android:resource="@xml/actions" />
 
         <activity
-            android:name=".activityview.StarPrincipalFragments"
-            android:exported="true" />
-        <activity
             android:name=".activityview.StarResultCadastroApi"
             android:exported="true" />
         <activity

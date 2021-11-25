@@ -10,29 +10,11 @@
         android:name="com.example.starwars.ui.principal.PrincipalFragment"
         android:label="@string/menu_principal"
         tools:layout="@layout/fragment_principal" />
-
-    <fragment
+   <fragment
         android:id="@+id/nav_consulta"
         android:name="com.example.starwars.ui.consultaapi.ConsultaapiFragment"
         android:label="@string/menu_consulta"
         tools:layout="@layout/fragment_consultaapi" />
-    <fragment
-        android:id="@+id/nav_listafilmes"
-        android:name="com.example.starwars.ui.filmes.FilmesFragment"
-        android:label="@string/menu_filmes"
-        tools:layout="@layout/filme_detalhe" />
-
-    <fragment
-        android:id="@+id/nav_avatares"
-        android:name="com.example.starwars.ui.avatares.AvataresFragment"
-        android:label="@string/menu_avatares"
-        tools:layout="@layout/fragment_avatares" />
-
-    <fragment
-        android:id="@+id/nav_trailer"
-        android:name="com.example.starwars.ui.trailers.TrailersFragment"
-        android:label="@string/menu_trailer"
-        tools:layout="@layout/fragment_trailers" />
     <fragment
         android:id="@+id/nav_desenvolvimento"
         android:name="com.example.starwars.ui.desenvolvimento.DesenvolvimentoFragment"
@@ -53,11 +35,30 @@
         android:name="com.example.starwars.ui.sair.SairFragment"
         android:label="@string/menu_sair"
         tools:layout="@layout/fragment_sair" />
+
+
     <activity
         android:id="@+id/nav_cadastro"
         android:name="com.example.starwars.activityview.CadastroApi"
         android:label="CadastroApi"
         tools:layout="@layout/activity_cadastro_api"/>
+    <activity
+        android:id="@+id/nav_listafilmes"
+        android:name="com.example.starwars.activityview.CardViewFilmes"
+        android:label="CardViewFilmes"
+        tools:layout="@layout/activity_card_view_filmes"/>
+    <activity
+        android:id="@+id/nav_avatares"
+        android:name="com.example.starwars.activityview.StarAvatar"
+        android:label="StarAvatar"
+        tools:layout="@layout/activity_star_avatar"/>
+    <activity
+        android:id="@+id/nav_trailer"
+        android:name="com.example.starwars.activityview.StarPrincipal"
+        android:label="StarPrincipal"
+        tools:layout="@layout/activity_star_principal"/>
+
+
 
 
 </navigation>

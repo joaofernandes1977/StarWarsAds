@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
 import com.example.starwars.model.Personagen;
 import com.google.android.material.snackbar.Snackbar;
@@ -19,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class CadastroApi extends AppCompatActivity {
 
     private TextView id_api, nome_api, url_api, historia_api, especie_api, veiculo_api;
-    private Button bt_cad_api;
+    private Button bt_cad_api, bt_voltar;
     String[] msg = { " PREENCHER TODOS OS CAMPOS", "CADASTRO OK"};
     String userId, userId2;
     EditText id_ed, nome_ed, url_ed, veiculo_ed, especie_ed, historia_ed;
@@ -36,6 +37,13 @@ public class CadastroApi extends AppCompatActivity {
         iniciarComponentes();
 
 
+        bt_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CadastroApi.this, PrincipalDrawerNav.class);
+                startActivity(intent);
+            }
+        });
         nome_ed = (EditText)findViewById(R.id.nome_api);
         id_ed = (EditText)findViewById(R.id.id_api);
         url_ed = (EditText)findViewById(R.id.url_api);
@@ -111,7 +119,7 @@ public class CadastroApi extends AppCompatActivity {
         historia_api = findViewById(R.id.historia_api);
         veiculo_api = findViewById(R.id.veiculo_api);
         especie_api = findViewById(R.id.especie_api);
-
+        bt_voltar = findViewById(R.id.voltarprincipalCad);
         bt_cad_api = findViewById(R.id.bt_cadastrar_api);
     }
 
