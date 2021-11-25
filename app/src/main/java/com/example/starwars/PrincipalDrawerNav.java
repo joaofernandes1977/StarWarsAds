@@ -52,9 +52,14 @@ public class PrincipalDrawerNav extends AppCompatActivity {
         binding.appBarPrincipalDrawerNav.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                enviaEmail();
+
+                /* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+
             }
+
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -82,6 +87,17 @@ public class PrincipalDrawerNav extends AppCompatActivity {
        // getMenuInflater().inflate(R.menu.principal_drawer_nav, menu);
 
         return true;
+    }
+
+    public void enviaEmail(){
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Digite o destino!"});
+        intent.putExtra(Intent.EXTRA_SUBJECT, new String[]{"Digite contato:"});
+        intent.putExtra(Intent.EXTRA_TEXT, new String[]{"A força está com você!"});
+        intent.setType("message/rfc822");
+        intent.setType("image/*");
+        startActivity(intent);
+
     }
 
     @Override

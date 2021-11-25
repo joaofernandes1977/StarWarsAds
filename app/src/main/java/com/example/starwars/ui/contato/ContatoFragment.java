@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 
 import com.example.starwars.R;
 
+import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ContatoFragment#newInstance} factory method to
@@ -60,7 +63,24 @@ public class ContatoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contato, container, false);
+        String descricao = "Agradecemos por você usar nosso APP, sua avaliação 5 estrelas nos motiva ainda mais para melhorar. Você pode nos encontrar nas redes sociais e enviar sugestões ou criticas para nosso e-mail abaixo. Obrigado!";
+        Element ver = new Element();
+        ver.setTitle("Versão 1.0");
+        return new AboutPage(getActivity())
+               .setImage(R.drawable.logostar)
+                .setDescription( descricao)
+                .addGroup("Entre em contato")
+                .addEmail("joao.fernandez.hl@gmail.com", "Envie um e-mail:")
+                .addGroup("Redes Sociais:")
+                .addGitHub("Grupo1-ADS","GitHub - Grupo1")
+                .addFacebook("joaoquadros1977","Facebook")
+                .addYoutube("StarWars","Youtube")
+                .addInstagram("starwars","Instagram")
+                .addTwitter("starwar","Twitter")
+                .addPlayStore("com.facebook.katana", "Download App")
+                .addItem(ver)
+
+                .create();
+        //return inflater.inflate(R.layout.fragment_contato, container, false);
     }
 }

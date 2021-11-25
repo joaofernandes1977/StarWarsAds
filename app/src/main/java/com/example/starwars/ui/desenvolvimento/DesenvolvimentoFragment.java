@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 
 import com.example.starwars.R;
 
+import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DesenvolvimentoFragment#newInstance} factory method to
@@ -60,7 +63,28 @@ public class DesenvolvimentoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_desenvolvimento, container, false);
+        String descricao =
+                "Android Studio Arctic Fox | 2020.3.1 Patch 3\n"+
+                "Linguagem: JAVA\n"+
+                "***** Bibliotecas Utilizadas no APP *****\n" +
+                "----------- build.gradle ----------- \n"+
+                "    'com.google.firebase:firebase-bom:29.0.0'\n" +
+                "    'com.google.firebase:firebase-auth'\n" +
+                "    'com.google.firebase:firebase-firestore'\n" +
+                "    'com.google.firebase:firebase-database'\n" +
+                "    'com.squareup.picasso:picasso:2.71828'\n" +
+                "    'androidx.recyclerview:recyclerview:1.2.1'\n" +
+                "    'io.github.medyo:android-about-page:2.0.0'";
+
+
+        return new AboutPage(getActivity())
+                .setImage(R.drawable.logostar)
+                .setDescription( descricao)
+                .addEmail("joao.fernandez.hl@gmail.com", "Envie um e-mail")
+                .addGitHub("Grupo1-ADS","GitHub - Grupo1")
+
+
+                .create();
+        //return inflater.inflate(R.layout.fragment_desenvolvimento, container, false);
     }
 }
