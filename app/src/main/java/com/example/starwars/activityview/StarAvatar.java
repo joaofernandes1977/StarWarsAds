@@ -68,10 +68,10 @@ public class StarAvatar extends AppCompatActivity {
         finish();
     }
     public void criaAvatares(){
-        /*
-        Avatar avatar = avatarRepository.getAvatar();
-        this.listavatars.add(avatar);
-        */
+
+        //Avatar avatar1 = avatarRepository.getAvatar();
+        //this.listavatars.add(avatar1);
+
         Avatar avatar = new Avatar("MESTRE YODA", "https://waie.com.br/starwars/1-yoda-300x300.png");
         this.listavatars.add(avatar);
         avatar = new Avatar("DARTH VADER", "https://waie.com.br/starwars/2-darth_vader-300x300.png");
