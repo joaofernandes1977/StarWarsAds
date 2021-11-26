@@ -14,6 +14,7 @@ import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
 import com.example.starwars.adapters.AvatarAdapter;
 import com.example.starwars.model.Avatar;
+import com.example.starwars.repositoryBd.AvatarRepository;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class StarAvatar extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<Avatar> listavatars = new ArrayList<>(    );
     private Button bt_voltar;
+    public AvatarRepository avatarRepository;
     //AvatarAdapter avatarAdapter = new AvatarAdapter();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +68,10 @@ public class StarAvatar extends AppCompatActivity {
         finish();
     }
     public void criaAvatares(){
-
+        /*
+        Avatar avatar = avatarRepository.getAvatar();
+        this.listavatars.add(avatar);
+        */
         Avatar avatar = new Avatar("MESTRE YODA", "https://waie.com.br/starwars/1-yoda-300x300.png");
         this.listavatars.add(avatar);
         avatar = new Avatar("DARTH VADER", "https://waie.com.br/starwars/2-darth_vader-300x300.png");
@@ -131,12 +136,6 @@ public class StarAvatar extends AppCompatActivity {
         this.listavatars.add(avatar);
         avatar = new Avatar("STORMTROOPER", "https://waie.com.br/starwars/32-stormtrooper-300x300.png");
         this.listavatars.add(avatar);
-
-
-
-
-
-
 
 
     }

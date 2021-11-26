@@ -1,4 +1,4 @@
-package com.example.starwars.fragment;
+package com.example.starwars.ui.fragments;
 
 import android.os.Bundle;
 
