@@ -21,8 +21,7 @@ public class Avatar {
         this.url = url;
     }
 
-    public Avatar() {
-    }
+
 
     public Avatar(String nome, String url) {
         this.nome = nome;

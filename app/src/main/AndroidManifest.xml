@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StarWars">
         <activity
+            android:name=".activityview.PeopleActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/activity_people" />
+
+        <activity
+            android:name=".activityview.PlayerVideo"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activityview.FilmeMusica"
+            android:exported="false" />
+        <activity
             android:name=".activityview.StarAvatar"
             android:exported="false" />
         <activity
@@ -20,11 +35,6 @@
         <activity
             android:name=".activityview.CardViewFilmes"
             android:exported="false" />
-
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/actions" />
-
         <activity
             android:name=".activityview.StarResultCadastroApi"
             android:exported="true" />

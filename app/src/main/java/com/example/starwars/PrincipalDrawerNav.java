@@ -38,7 +38,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class PrincipalDrawerNav extends AppCompatActivity {
-    public Button bt_teste;
+
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityPrincipalDrawerNavBinding binding;
@@ -46,17 +46,11 @@ public class PrincipalDrawerNav extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AvatarViewModel viewModel = new ViewModelProvider(this).get(AvatarViewModel.class);
+        //AvatarViewModel viewModel = new ViewModelProvider(this).get(AvatarViewModel.class);
         FilmeViewModel viewModelfilme = new ViewModelProvider(this).get(FilmeViewModel.class);
 
 
         viewModelfilme.getAllFilmes().observe(this,filmes ->{});
-        viewModel.getAllAvatars().observe(this,avatars ->{
-            //aqui vamos atualizar a UI
-            //exemplo para uso em recyclerView/adapter
-            //adapter.addHolidayList(currencyPojos);
-            //adapter.notifyDataSetChanged();
-        });
 
         binding = ActivityPrincipalDrawerNavBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

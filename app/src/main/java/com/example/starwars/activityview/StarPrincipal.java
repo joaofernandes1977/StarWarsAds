@@ -29,8 +29,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import java.util.HashMap;
 
 public class StarPrincipal extends AppCompatActivity {
-    private  TextView nomeUser, nomeEmail, nomeDraw, emailDraw;
-    private Button bt_deslogar, bt_cadastrar, bt_fragment, bt_card, bt_draewr, bt_avatar;
+    private  TextView nomeUser, nomeEmail;
+    private Button bt_deslogar, bt_cadastrar, bt_card, bt_draewr, bt_avatar;
     FirebaseFirestore banco = FirebaseFirestore.getInstance();
     String userId;
     //Personagen p = new Personagen();
@@ -38,7 +38,7 @@ public class StarPrincipal extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_star_principal);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         IniciaComponentes();
 
 

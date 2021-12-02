@@ -10,11 +10,7 @@
         android:name="com.example.starwars.ui.principal.PrincipalFragment"
         android:label="@string/menu_principal"
         tools:layout="@layout/fragment_principal" />
-   <fragment
-        android:id="@+id/nav_consulta"
-        android:name="com.example.starwars.ui.consultaapi.ConsultaapiFragment"
-        android:label="@string/menu_consulta"
-        tools:layout="@layout/fragment_consultaapi" />
+
     <fragment
         android:id="@+id/nav_desenvolvimento"
         android:name="com.example.starwars.ui.desenvolvimento.DesenvolvimentoFragment"
@@ -30,11 +26,7 @@
         android:name="com.example.starwars.ui.contato.ContatoFragment"
         android:label="@string/menu_contato"
         tools:layout="@layout/fragment_contato" />
-    <fragment
-        android:id="@+id/nav_sair"
-        android:name="com.example.starwars.ui.sair.SairFragment"
-        android:label="@string/menu_sair"
-        tools:layout="@layout/fragment_sair" />
+
 
 
     <activity
@@ -54,11 +46,19 @@
         tools:layout="@layout/activity_star_avatar"/>
     <activity
         android:id="@+id/nav_trailer"
+        android:name="com.example.starwars.activityview.FilmeMusica"
+        android:label="StarPrincipal"
+        tools:layout="@layout/activity_filme_musica"/>
+    <activity
+        android:id="@+id/nav_sair"
         android:name="com.example.starwars.activityview.StarPrincipal"
         android:label="StarPrincipal"
-        tools:layout="@layout/activity_star_principal"/>
-
-
+        android:layout="@layout/activity_star_principal" />
+    <activity
+        android:id="@+id/nav_consulta"
+        android:name="com.example.starwars.activityview.PeopleActivity"
+        android:label="StarPrincipal"
+        android:layout="@layout/activity_people" />
 
 
 </navigation>

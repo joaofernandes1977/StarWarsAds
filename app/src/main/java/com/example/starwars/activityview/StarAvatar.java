@@ -1,8 +1,12 @@
 package com.example.starwars.activityview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -13,25 +17,57 @@ import android.widget.Button;
 import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
 import com.example.starwars.adapters.AvatarAdapter;
+import com.example.starwars.adapters.AvatarAdapter.MyViewHolder;
+import com.example.starwars.databinding.ActivityMainBinding;
+import com.example.starwars.databinding.ActivityStarAvatarBinding;
 import com.example.starwars.model.Avatar;
 import com.example.starwars.repositoryBd.AvatarRepository;
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.starwars.viewModel.AvatarViewModel;
+import com.example.starwars.viewModel.FilmeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StarAvatar extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<Avatar> listavatars = new ArrayList<>(    );
+    private List<Avatar> listavatars = new ArrayList<>();
+    private List<Avatar> listavatars2 = new ArrayList<>();
     private Button bt_voltar;
     public AvatarRepository avatarRepository;
+
     //AvatarAdapter avatarAdapter = new AvatarAdapter();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_star_avatar);
+        //setContentView(R.layout.activity_star_avatar);
+
         getSupportActionBar().hide();
         iniciacomponentes();
+
+        AvatarRepository.setContext(this);
+
+        AvatarViewModel viewModel = new ViewModelProvider(this).get(AvatarViewModel.class);
+
+        ActivityStarAvatarBinding layout = DataBindingUtil.setContentView(this,R.layout.activity_star_avatar);
+        viewModel.getAvatar().observe(this, avatar -> {
+
+        });
+
+        viewModel.getAllAvatars().observe(this,avatars ->{
+            //aqui vamos atualizar a UI
+            //exemplo para uso em recyclerView/adapter
+            //adapter.addHolidayList(currencyPojos);
+            //adapter.notifyDataSetChanged();
+        });
+
+        LiveData<Avatar> LiveDataAvatar = viewModel.getAvatar();
+        LiveDataAvatar.observe(this, new Observer<Avatar>() {
+            @Override
+            public void onChanged(Avatar avatar) {
+                layout.setAvatar(avatar);
+            }
+        });
 
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,13 +79,8 @@ public class StarAvatar extends AppCompatActivity {
             }
         });
 
-
-
         this.criaAvatares();
         recyclerView = findViewById(R.id.recyclerViewAvatar);
-
-        //Lista avatar
-
 
         //configura adapter
         AvatarAdapter avatarAdapter = new AvatarAdapter( listavatars);
@@ -61,6 +92,7 @@ public class StarAvatar extends AppCompatActivity {
         recyclerView.setAdapter(avatarAdapter);
 
 
+
     }
     public void voltarPrincipal(){
         Intent intent = new Intent(StarAvatar.this, StarPrincipal.class);
@@ -69,8 +101,12 @@ public class StarAvatar extends AppCompatActivity {
     }
     public void criaAvatares(){
 
-        //Avatar avatar1 = avatarRepository.getAvatar();
-        //this.listavatars.add(avatar1);
+        //avatarRepository.getAllAvatars();
+        // for (listavatars2 ==)
+        // listavatars2.add(avatarRepository);
+        //this.listavatars = listavatars2;
+        //avatarRepository.getAvatar();
+        //System.out.println(avatarRepository);
 
         Avatar avatar = new Avatar("MESTRE YODA", "https://waie.com.br/starwars/1-yoda-300x300.png");
         this.listavatars.add(avatar);
@@ -140,7 +176,8 @@ public class StarAvatar extends AppCompatActivity {
 
     }
 
- public void iniciacomponentes(){
+    public void iniciacomponentes(){
         bt_voltar = findViewById(R.id.voltarprincipal);
- }
+    }
 }
+
