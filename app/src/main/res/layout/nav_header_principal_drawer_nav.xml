@@ -26,13 +26,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="STAR WARS" />
+        android:textStyle="bold"
+        android:text="Helena" />
 
     <TextView
         android:id="@+id/textEmailDr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="TRABALHO FINAL ADS-GRUPO1" />
+        android:text="helena@gmail.com" />
 
 </LinearLayout>

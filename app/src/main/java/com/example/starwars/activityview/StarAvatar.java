@@ -29,11 +29,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StarAvatar extends AppCompatActivity {
+    public AvatarRepository avatarRepository;
     private RecyclerView recyclerView;
     private List<Avatar> listavatars = new ArrayList<>();
     private List<Avatar> listavatars2 = new ArrayList<>();
     private Button bt_voltar;
-    public AvatarRepository avatarRepository;
+
 
     //AvatarAdapter avatarAdapter = new AvatarAdapter();
 
@@ -44,46 +45,37 @@ public class StarAvatar extends AppCompatActivity {
 
         getSupportActionBar().hide();
         iniciacomponentes();
+        this.criaAvatares();
+
 
         AvatarRepository.setContext(this);
 
         AvatarViewModel viewModel = new ViewModelProvider(this).get(AvatarViewModel.class);
 
         ActivityStarAvatarBinding layout = DataBindingUtil.setContentView(this,R.layout.activity_star_avatar);
-        viewModel.getAvatar().observe(this, avatar -> {
+        viewModel.getAllAvatars().observe(this, avatar -> {
 
         });
 
-        viewModel.getAllAvatars().observe(this,avatars ->{
-            //aqui vamos atualizar a UI
-            //exemplo para uso em recyclerView/adapter
-            //adapter.addHolidayList(currencyPojos);
-            //adapter.notifyDataSetChanged();
-        });
 
-        LiveData<Avatar> LiveDataAvatar = viewModel.getAvatar();
+
+      LiveData<Avatar> LiveDataAvatar = viewModel.getAvatar();
         LiveDataAvatar.observe(this, new Observer<Avatar>() {
             @Override
             public void onChanged(Avatar avatar) {
                 layout.setAvatar(avatar);
-            }
-        });
-
-        bt_voltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(StarAvatar.this, PrincipalDrawerNav.class);
-                startActivity(intent);
 
             }
         });
 
-        this.criaAvatares();
+
+
+      // this.criaAvatares();
+
         recyclerView = findViewById(R.id.recyclerViewAvatar);
 
         //configura adapter
-        AvatarAdapter avatarAdapter = new AvatarAdapter( listavatars);
+        AvatarAdapter avatarAdapter = new AvatarAdapter(listavatars);
         // configura recyclerview
         //RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
@@ -91,14 +83,21 @@ public class StarAvatar extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(avatarAdapter);
 
+    }
 
 
+    public void voltar(View view){
+                Intent intent = new Intent(StarAvatar.this, PrincipalDrawerNav.class);
+                startActivity(intent);
     }
-    public void voltarPrincipal(){
-        Intent intent = new Intent(StarAvatar.this, StarPrincipal.class);
-        startActivity(intent);
-        finish();
-    }
+
+
+
+
+
+
+
+
     public void criaAvatares(){
 
         //avatarRepository.getAllAvatars();

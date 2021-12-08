@@ -2,25 +2,12 @@ package com.example.starwars;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.starwars.activityview.CadastroApi;
-import com.example.starwars.activityview.CardViewFilmes;
-import com.example.starwars.activityview.StarAvatar;
-import com.example.starwars.activityview.StarPrincipal;
-import com.example.starwars.model.User;
-import com.example.starwars.viewModel.AvatarViewModel;
 import com.example.starwars.viewModel.FilmeViewModel;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -30,12 +17,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.starwars.databinding.ActivityPrincipalDrawerNavBinding;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class PrincipalDrawerNav extends AppCompatActivity {
 

@@ -54,7 +54,7 @@ public class StarCadastro extends AppCompatActivity {
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StarCadastro.this, StarPrincipal.class);
+                Intent intent = new Intent(StarCadastro.this, ApisJsonActivity.class);
                 startActivity(intent);
             }
         });

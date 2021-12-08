@@ -4,10 +4,10 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Personagen implements Parcelable {
-        String id, nome, urlImage, especie, veiculo, historia;
+        String  nome, urlImage, especie, veiculo, historia;
 
     protected Personagen(Parcel in) {
-        id = in.readString();
+
         nome = in.readString();
         urlImage = in.readString();
         especie = in.readString();
@@ -27,13 +27,7 @@ public class Personagen implements Parcelable {
         }
     };
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -85,7 +79,7 @@ public class Personagen implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(id);
+
         parcel.writeString(nome);
         parcel.writeString(urlImage);
         parcel.writeString(especie);

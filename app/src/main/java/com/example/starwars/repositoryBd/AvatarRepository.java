@@ -108,7 +108,7 @@ public class AvatarRepository extends IAvatarRepository {
         if (mockupBanco == null) {
             mockupBanco.add(new Avatar("MESTRE YODA", "https://waie.com.br/starwars/1-yoda-300x300.png"));
         }
-        return (Avatar) mockupBanco;
+        return mockupBanco.get(0);
     }
 
     @Override

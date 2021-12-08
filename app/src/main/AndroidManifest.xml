@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StarWars">
         <activity
-            android:name=".activityview.PeopleActivity"
+            android:name=".activityview.ConsultaApi"
+            android:exported="false" />
+        <activity
+            android:name=".activityview.SairActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activityview.NavesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activityview.PlanetaActivity"
             android:exported="false" />
 
         <meta-data
@@ -36,13 +45,16 @@
             android:name=".activityview.CardViewFilmes"
             android:exported="false" />
         <activity
+            android:name=".activityview.PersonagemActivity"
+            android:exported="true" />
+        <activity
             android:name=".activityview.StarResultCadastroApi"
             android:exported="true" />
         <activity
             android:name=".activityview.CadastroApi"
             android:exported="true" />
         <activity
-            android:name=".activityview.StarPrincipal"
+            android:name=".activityview.ApisJsonActivity"
             android:exported="true" />
         <activity
             android:name=".activityview.StarCadastro"

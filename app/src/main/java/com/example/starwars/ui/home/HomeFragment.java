@@ -4,17 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.starwars.R;
-import com.example.starwars.activityview.StarPrincipal;
+import com.example.starwars.activityview.ApisJsonActivity;
 import com.example.starwars.databinding.FragmentHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -24,7 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class HomeFragment extends Fragment {
-    StarPrincipal starPrincipal = new StarPrincipal();
+    ApisJsonActivity apisJsonActivity = new ApisJsonActivity();
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
 
@@ -39,7 +35,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         FirebaseFirestore banco = FirebaseFirestore.getInstance();
-        View v =  inflater.inflate(R.layout.activity_star_principal, container, false);
+        View v =  inflater.inflate(R.layout.activity_api_json, container, false);
 
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DocumentReference documentReference = banco.collection("Usuarios").document(userId);

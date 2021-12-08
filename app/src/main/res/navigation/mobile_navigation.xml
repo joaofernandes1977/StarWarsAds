@@ -51,14 +51,14 @@
         tools:layout="@layout/activity_filme_musica"/>
     <activity
         android:id="@+id/nav_sair"
-        android:name="com.example.starwars.activityview.StarPrincipal"
+        android:name="com.example.starwars.activityview.SairActivity"
         android:label="StarPrincipal"
-        android:layout="@layout/activity_star_principal" />
+        android:layout="@layout/activity_sair" />
     <activity
         android:id="@+id/nav_consulta"
-        android:name="com.example.starwars.activityview.PeopleActivity"
+        android:name="com.example.starwars.activityview.ApisJsonActivity"
         android:label="StarPrincipal"
-        android:layout="@layout/activity_people" />
+        android:layout="@layout/activity_api_json" />
 
 
 </navigation>

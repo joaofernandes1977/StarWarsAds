@@ -17,13 +17,16 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CadastroApi extends AppCompatActivity {
 
-    private TextView id_api, nome_api, url_api, historia_api, especie_api, veiculo_api;
+    private TextView  nome_api, url_api, historia_api, especie_api, veiculo_api;
     private Button bt_cad_api, bt_voltar;
     String[] msg = { " PREENCHER TODOS OS CAMPOS", "CADASTRO OK"};
     String userId, userId2;
-    EditText id_ed, nome_ed, url_ed, veiculo_ed, especie_ed, historia_ed;
+    EditText nome_ed, url_ed, veiculo_ed, especie_ed, historia_ed;
     Personagen person = new Personagen();
 
     private DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
@@ -45,7 +48,6 @@ public class CadastroApi extends AppCompatActivity {
             }
         });
         nome_ed = (EditText)findViewById(R.id.nome_api);
-        id_ed = (EditText)findViewById(R.id.id_api);
         url_ed = (EditText)findViewById(R.id.url_api);
         veiculo_ed = (EditText)findViewById(R.id.veiculo_api);
         especie_ed = (EditText) findViewById(R.id.especie_api);
@@ -57,7 +59,7 @@ public class CadastroApi extends AppCompatActivity {
         bt_cad_api.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String id_a = id_ed.getText().toString();
+
                 String nome_a = nome_ed.getText().toString();
                 String url_a = url_ed.getText().toString();
                 String veiculo_a = veiculo_ed.getText().toString();
@@ -65,7 +67,7 @@ public class CadastroApi extends AppCompatActivity {
                 String historia_a = historia_ed.getText().toString();
 
 
-                person.setId(id_a);
+
                 person.setNome(nome_a);
                 person.setUrlImage(url_a);
                 person.setEspecie(especie_a);
@@ -73,7 +75,8 @@ public class CadastroApi extends AppCompatActivity {
                 person.setHistoria(historia_a);
 
 
-                if (id_a.isEmpty() || url_a.isEmpty() || nome_a.isEmpty() || veiculo_a.isEmpty() || especie_a.isEmpty() || historia_a.isEmpty()){
+
+                if ( url_a.isEmpty() || nome_a.isEmpty() || veiculo_a.isEmpty() || especie_a.isEmpty() || historia_a.isEmpty()){
                     Snackbar snackbar = Snackbar.make(v, msg[0], Snackbar.LENGTH_LONG);
                     snackbar.setBackgroundTint(Color.WHITE);
                     snackbar.setTextColor(Color.BLACK);
@@ -87,6 +90,11 @@ public class CadastroApi extends AppCompatActivity {
 
                     Intent intent = new Intent(CadastroApi.this, StarResultCadastroApi.class);
                     intent.putExtra("personagem", person);
+                    intent.putExtra("NOME", nome_api.getText().toString());
+                    intent.putExtra("URL", url_api.getText().toString());
+                    intent.putExtra("HISTORIA", historia_api.getText().toString());
+                    intent.putExtra("VEICULO", veiculo_api.getText().toString());
+                    intent.putExtra("ESPECIE", especie_api.getText().toString());
 
                     startActivity(intent);
 
@@ -113,7 +121,7 @@ public class CadastroApi extends AppCompatActivity {
 
     private void iniciarComponentes(){
 
-        id_api = findViewById(R.id.id_api);
+
         nome_api = findViewById(R.id.nome_api);
         url_api = findViewById(R.id.url_api);
         historia_api = findViewById(R.id.historia_api);

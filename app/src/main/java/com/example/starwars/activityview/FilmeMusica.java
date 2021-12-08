@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.SeekBar;
 
+import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
 
 public class FilmeMusica extends AppCompatActivity {
@@ -20,6 +21,7 @@ public class FilmeMusica extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filme_musica);
+        getSupportActionBar().hide();
         mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.starwarsmusic);
         incializaSeekBar();
     }
@@ -80,8 +82,9 @@ public class FilmeMusica extends AppCompatActivity {
         Intent intent = new Intent(FilmeMusica.this, PlayerVideo.class);
         startActivity(intent);
     }
-    public void abrirVideo2(View view){
-        Intent intent = new Intent(FilmeMusica.this, PlayerVideoUrl.class);
+    public  void voltarPrincipal(View view){
+
+        Intent intent = new Intent(FilmeMusica.this, PrincipalDrawerNav.class);
         startActivity(intent);
     }
 

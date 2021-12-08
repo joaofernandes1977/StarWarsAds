@@ -44,4 +44,8 @@
     <string name="professor">Professor: Jean Poul</string>
     <string name="cadeira">DISPOSITIVOS MÓVEIS</string>
     <string name="grupo1">GRUPO 1</string>
+    <string name="title_activity_apis_navgation">ApisNavgationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

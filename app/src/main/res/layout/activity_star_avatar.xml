@@ -18,7 +18,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:theme="@style/Theme.StarWars.AppBarOverlay"
             app:layout_constraintBottom_toTopOf="@+id/recyclerViewAvatar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginEnd="3dp"
-                android:text="VOLTAR"
+                android:drawableLeft="@drawable/ic_home"
+                android:onClick="voltar"
+                android:text="HOME"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </com.google.android.material.appbar.AppBarLayout>
