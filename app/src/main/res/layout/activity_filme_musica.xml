@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGray"
+    android:background="@color/design_default_color_on_primary"
     tools:context=".activityview.FilmeMusica">
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="0dp"
@@ -30,6 +30,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </com.google.android.material.appbar.AppBarLayout>
+
+
     <SeekBar
         android:id="@+id/seekBarVolume"
         android:layout_width="260dp"
@@ -46,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/ic_play"
+        android:backgroundTint="@color/Honeydew"
         android:onClick="exucutaSom"
         app:layout_constraintEnd_toStartOf="@+id/button_pause"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="MUSICA TEMA STAR WARS"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="SW - Obi Wan - Qui Gon vs Darth Maul"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="volume "
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/seekBarVolume"
         app:layout_constraintEnd_toEndOf="@+id/seekBarVolume" />
 
@@ -164,12 +167,12 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="https://waie.com.br/starwars/Filmes/VID-20211130-WA0000.mp4"
-        android:textColor="#F44336"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -30,10 +30,9 @@ import java.util.HashMap;
 
 public class ApisJsonActivity extends AppCompatActivity {
     private  TextView nomeUser, nomeEmail;
-    private Button bt_personagem, bt_planeta, bt_naves, bt_teste;
-    FirebaseFirestore banco = FirebaseFirestore.getInstance();
-    String userId;
-    //Personagen p = new Personagen();
+    private Button bt_personagem, bt_planeta, bt_naves;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,21 +82,7 @@ public class ApisJsonActivity extends AppCompatActivity {
 */
     }
 
-    protected void onStart(){
-        super.onStart();
-        userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DocumentReference documentReference = banco.collection("Usuarios").document(userId);
-        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
-                if (documentSnapshot != null){
-                    nomeUser.setText(documentSnapshot.getString("nome"));
-                    nomeEmail.setText(documentSnapshot.getString("email"));
 
-                }
-            }
-        });
-    }
     public void cosultaApiBanco(View view){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         DatabaseReference personagens = reference.child("Personagen");
@@ -141,13 +126,11 @@ public class ApisJsonActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private void IniciaComponentes(){
-        nomeUser = findViewById(R.id.nome_usuario);
-        nomeEmail = findViewById(R.id.nome_mail);
 
         bt_personagem = findViewById(R.id.personagensApi);
         bt_planeta = findViewById(R.id.planetasApi);
         bt_naves = findViewById(R.id.navesApi);
-       // bt_teste = findViewById(R.id.teste);
+
 
     }
 

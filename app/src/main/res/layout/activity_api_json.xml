@@ -49,61 +49,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:id="@+id/conteinerComponentsCad"
-            style="@style/ContainerComponents3"
-            android:layout_marginStart="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/conteiner_user" />
-
-        <ImageView
-            android:id="@+id/ic_user_new"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_user2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/conteiner_user" />
-
-        <TextView
-            android:id="@+id/nome_usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:text=""
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/ic_user_new"
-            app:layout_constraintTop_toBottomOf="@id/conteiner_user" />
-
-        <ImageView
-            android:id="@+id/ic_mail"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_email2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ic_user_new" />
-
-        <TextView
-            android:id="@+id/nome_mail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="36dp"
-            android:text=""
-            android:textColor="@color/white"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/ic_mail"
-            app:layout_constraintTop_toBottomOf="@+id/ic_user_new" />
-
         <!-- <Button
         android:id="@+id/deslogar"
         style="@style/Button"
@@ -122,29 +67,33 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/personagensApi"
             style="@style/Button"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="200dp"
             android:text="PERSONAGENS API"
-            app:layout_constraintEnd_toEndOf="@id/nome_mail"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nome_mail" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conteiner_user" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/planetasApi"
             style="@style/Button"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="200dp"
             android:text="PLANETAS API"
-            app:layout_constraintEnd_toEndOf="@id/personagensApi"
-            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personagensApi" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/navesApi"
             style="@style/Button"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="200dp"
             android:text="NAVES API"
-            app:layout_constraintEnd_toEndOf="@id/planetasApi"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/planetasApi" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/planetasApi" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
