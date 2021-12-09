@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
@@ -45,7 +46,7 @@ public class StarResultCadastroApi extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.avatar);
         String url = valor2_url;
         Picasso.get().load(url).into(imageView);
-
+        Toast.makeText(this, "CADASTRO REALIZADO COM SUCESSO" , Toast.LENGTH_LONG).show();
     }
     public void cadastronovo(View view){
         Intent intent = new Intent(StarResultCadastroApi.this, CadastroApi.class);

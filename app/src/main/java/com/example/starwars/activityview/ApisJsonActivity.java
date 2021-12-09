@@ -70,6 +70,7 @@ public class ApisJsonActivity extends AppCompatActivity {
                 finish();
             }
         });
+        /*
         bt_teste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,7 +80,7 @@ public class ApisJsonActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+*/
     }
 
     protected void onStart(){
@@ -146,7 +147,7 @@ public class ApisJsonActivity extends AppCompatActivity {
         bt_personagem = findViewById(R.id.personagensApi);
         bt_planeta = findViewById(R.id.planetasApi);
         bt_naves = findViewById(R.id.navesApi);
-        bt_teste = findViewById(R.id.teste);
+       // bt_teste = findViewById(R.id.teste);
 
     }
 

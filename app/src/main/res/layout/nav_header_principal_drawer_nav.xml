@@ -27,13 +27,13 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:text="Helena" />
+        android:text="STAR WARS" />
 
     <TextView
         android:id="@+id/textEmailDr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="helena@gmail.com" />
+        android:text="APP GRUPO 1 - ADS" />
 
 </LinearLayout>
