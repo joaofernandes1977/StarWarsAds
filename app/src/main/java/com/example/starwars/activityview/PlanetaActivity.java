@@ -93,6 +93,11 @@ public class PlanetaActivity extends AppCompatActivity implements Response.Liste
         Intent intent = new Intent(PlanetaActivity.this, PrincipalDrawerNav.class);
         startActivity(intent);
     }
+    public  void novoplaneta(View view){
+
+        Intent intent = new Intent(PlanetaActivity.this, CadastroApi.class);
+        startActivity(intent);
+    }
     @Override
     public void onErrorResponse(VolleyError error) {
         Toast.makeText(this, "deu certo" + error.getMessage(), Toast.LENGTH_LONG).show();

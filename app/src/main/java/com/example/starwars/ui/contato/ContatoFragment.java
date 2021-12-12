@@ -72,7 +72,7 @@ public class ContatoFragment extends Fragment {
                 .addGroup("Entre em contato")
                 .addEmail("joao.fernandez.hl@gmail.com", "Envie um e-mail:")
                 .addGroup("Redes Sociais:")
-                .addGitHub("Grupo1-ADS","GitHub - Grupo1")
+                .addGitHub("joaofernandes1977","GitHub João Fernandes")
                 .addFacebook("joaoquadros1977","Facebook")
                 .addYoutube("StarWars","Youtube")
                 .addInstagram("starwars","Instagram")

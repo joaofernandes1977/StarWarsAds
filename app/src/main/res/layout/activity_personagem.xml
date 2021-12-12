@@ -46,6 +46,17 @@
                 android:text="HOME"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/novopersonagem"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:drawableLeft="@drawable/ic_cadastro_api"
+                android:onClick="novopersonagem"
+                android:text="NOVO"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

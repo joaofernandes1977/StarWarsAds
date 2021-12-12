@@ -22,8 +22,8 @@ import java.util.Map;
 
 public class CadastroApi extends AppCompatActivity {
 
-    private TextView  nome_api, url_api, historia_api, especie_api, veiculo_api;
-    private Button bt_cad_api, bt_voltar;
+    private TextView  nome_api, url_api, historia_api ;
+    private Button bt_cad_api, bt_voltar, bt_cad_planeta, bt_cad_nave;
     String[] msg = { " PREENCHER TODOS OS CAMPOS", "CADASTRO OK"};
     String userId, userId2;
     EditText nome_ed, url_ed, veiculo_ed, especie_ed, historia_ed;
@@ -39,6 +39,83 @@ public class CadastroApi extends AppCompatActivity {
         getSupportActionBar().hide();
         iniciarComponentes();
 
+        bt_cad_nave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nome_a = nome_ed.getText().toString();
+                String url_a = url_ed.getText().toString();
+                String historia_a = historia_ed.getText().toString();
+
+                person.setNome(nome_a);
+                person.setUrlImage(url_a);
+                person.setHistoria(historia_a);
+
+                if ( url_a.isEmpty() || nome_a.isEmpty() || historia_a.isEmpty()){
+                    Snackbar snackbar = Snackbar.make(view, msg[0], Snackbar.LENGTH_LONG);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
+                }else {
+
+                    Snackbar snackbar = Snackbar.make(view, msg[1],Snackbar.LENGTH_LONG);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
+
+                    Intent intent = new Intent(CadastroApi.this, StarResultCadastroApi.class);
+                    intent.putExtra("personagem", person);
+                    intent.putExtra("NOME", nome_api.getText().toString());
+                    intent.putExtra("URL", url_api.getText().toString());
+                    intent.putExtra("HISTORIA", historia_api.getText().toString());
+
+
+                    startActivity(intent);
+
+                    SalvarDadosNave(person);
+
+
+                }
+            }
+        });
+        bt_cad_planeta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nome_a = nome_ed.getText().toString();
+                String url_a = url_ed.getText().toString();
+                String historia_a = historia_ed.getText().toString();
+
+                person.setNome(nome_a);
+                person.setUrlImage(url_a);
+                person.setHistoria(historia_a);
+
+                if ( url_a.isEmpty() || nome_a.isEmpty() || historia_a.isEmpty()){
+                    Snackbar snackbar = Snackbar.make(view, msg[0], Snackbar.LENGTH_LONG);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
+                }else {
+
+                    Snackbar snackbar = Snackbar.make(view, msg[1],Snackbar.LENGTH_LONG);
+                    snackbar.setBackgroundTint(Color.WHITE);
+                    snackbar.setTextColor(Color.BLACK);
+                    snackbar.show();
+
+                    Intent intent = new Intent(CadastroApi.this, StarResultCadastroApi.class);
+                    intent.putExtra("personagem", person);
+                    intent.putExtra("NOME", nome_api.getText().toString());
+                    intent.putExtra("URL", url_api.getText().toString());
+                    intent.putExtra("HISTORIA", historia_api.getText().toString());
+
+
+                    startActivity(intent);
+
+                    SalvarDadosPlaneta(person);
+
+
+                }
+            }
+
+        });
 
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,12 +126,10 @@ public class CadastroApi extends AppCompatActivity {
         });
         nome_ed = (EditText)findViewById(R.id.nome_api);
         url_ed = (EditText)findViewById(R.id.url_api);
-        veiculo_ed = (EditText)findViewById(R.id.veiculo_api);
-        especie_ed = (EditText) findViewById(R.id.especie_api);
         historia_ed = (EditText) findViewById(R.id.historia_api);
 
         bt_cad_api = (Button)findViewById(R.id.bt_cadastrar_api);
-
+        bt_cad_planeta = (Button)findViewById(R.id.cad_planeta);
 
         bt_cad_api.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,21 +137,13 @@ public class CadastroApi extends AppCompatActivity {
 
                 String nome_a = nome_ed.getText().toString();
                 String url_a = url_ed.getText().toString();
-                String veiculo_a = veiculo_ed.getText().toString();
-                String especie_a = especie_ed.getText().toString();
                 String historia_a = historia_ed.getText().toString();
-
-
 
                 person.setNome(nome_a);
                 person.setUrlImage(url_a);
-                person.setEspecie(especie_a);
-                person.setVeiculo(veiculo_a);
                 person.setHistoria(historia_a);
 
-
-
-                if ( url_a.isEmpty() || nome_a.isEmpty() || veiculo_a.isEmpty() || especie_a.isEmpty() || historia_a.isEmpty()){
+                if ( url_a.isEmpty() || nome_a.isEmpty() || historia_a.isEmpty()){
                     Snackbar snackbar = Snackbar.make(v, msg[0], Snackbar.LENGTH_LONG);
                     snackbar.setBackgroundTint(Color.WHITE);
                     snackbar.setTextColor(Color.BLACK);
@@ -93,12 +160,12 @@ public class CadastroApi extends AppCompatActivity {
                     intent.putExtra("NOME", nome_api.getText().toString());
                     intent.putExtra("URL", url_api.getText().toString());
                     intent.putExtra("HISTORIA", historia_api.getText().toString());
-                    intent.putExtra("VEICULO", veiculo_api.getText().toString());
-                    intent.putExtra("ESPECIE", especie_api.getText().toString());
+
 
                     startActivity(intent);
 
                     SalvarDadosApi(person);
+
                     //finish();
 
 
@@ -114,8 +181,20 @@ public class CadastroApi extends AppCompatActivity {
 
     private void SalvarDadosApi( Personagen person) {
 
-            DatabaseReference personagens = reference.child("Personagen");
+            DatabaseReference personagens = reference.child("Personagens");
             personagens.push().setValue( person );
+
+    }
+    private void SalvarDadosPlaneta( Personagen person) {
+
+        DatabaseReference personagens = reference.child("Planetas");
+        personagens.push().setValue( person );
+
+    }
+    private void SalvarDadosNave( Personagen person) {
+
+        DatabaseReference personagens = reference.child("Naves");
+        personagens.push().setValue( person );
 
     }
 
@@ -125,10 +204,11 @@ public class CadastroApi extends AppCompatActivity {
         nome_api = findViewById(R.id.nome_api);
         url_api = findViewById(R.id.url_api);
         historia_api = findViewById(R.id.historia_api);
-        veiculo_api = findViewById(R.id.veiculo_api);
-        especie_api = findViewById(R.id.especie_api);
+
         bt_voltar = findViewById(R.id.voltarprincipalCad);
         bt_cad_api = findViewById(R.id.bt_cadastrar_api);
+        bt_cad_planeta = findViewById(R.id.cad_planeta);
+        bt_cad_nave = findViewById(R.id.cad_nave);
     }
 
 }

@@ -124,60 +124,6 @@
             app:layout_constraintTop_toBottomOf="@+id/url" />
 
         <TextView
-            android:id="@+id/especieTit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:text="ESPECIE"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/url_2" />
-
-        <TextView
-            android:id="@+id/especie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="30dp"
-            android:text="ESPECIE"
-            android:textColor="@color/gold"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/especieTit" />
-
-        <TextView
-            android:id="@+id/veiculoTit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:text="VEICULO:"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/especie" />
-
-        <TextView
-            android:id="@+id/veiculo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="30dp"
-            android:text="VEICULO"
-            android:textColor="@color/gold"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/veiculoTit" />
-
-        <TextView
             android:id="@+id/historia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -187,7 +133,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/veiculo" />
+            app:layout_constraintTop_toBottomOf="@+id/url_2" />
 
         <TextView
             android:id="@+id/historia_4"

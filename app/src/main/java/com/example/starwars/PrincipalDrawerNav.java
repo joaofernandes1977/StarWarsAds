@@ -54,8 +54,8 @@ public class PrincipalDrawerNav extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-        R.id.nav_principal, R.id.nav_consulta, R.id.nav_listafilmes, R.id.nav_avatares, R.id.nav_trailer, R.id.nav_desenvolvimento, R.id.nav_agradecimento,
-                R.id.nav_contato, R.id.nav_sair, R.id.nav_cadastro)
+        R.id.nav_principal, R.id.nav_planetas, R.id.nav_listafilmes, R.id.nav_avatares, R.id.nav_trailer, R.id.nav_desenvolvimento, R.id.nav_agradecimento,
+                R.id.nav_contato, R.id.nav_sair, R.id.nav_personagem)
                 .setOpenableLayout(drawer)
                 .build();
 

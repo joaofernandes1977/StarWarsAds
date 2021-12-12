@@ -34,6 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="APP GRUPO 1 - ADS" />
+        android:text="" />
 
 </LinearLayout>

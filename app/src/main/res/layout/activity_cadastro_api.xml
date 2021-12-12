@@ -69,7 +69,7 @@
         <EditText
             android:id="@+id/nome_api"
             style="@style/Edit_Text_api"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="150dp"
             android:hint="NOME:"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -88,9 +88,9 @@
             app:layout_constraintTop_toBottomOf="@+id/nome_api" />
 
         <EditText
-            android:id="@+id/especie_api"
+            android:id="@+id/historia_api"
             style="@style/Edit_Text_api"
-            android:hint="ESPECIE:"
+            android:hint="HISTÓRIA:"
             android:textColor="@color/white"
 
             android:textColorHint="@color/white"
@@ -98,37 +98,64 @@
             app:layout_constraintStart_toStartOf="@+id/url_api"
             app:layout_constraintTop_toBottomOf="@+id/url_api" />
 
-        <EditText
-            android:id="@+id/veiculo_api"
-            style="@style/Edit_Text_api"
-            android:hint="VEICULO:"
-            android:textColor="@color/white"
-
-            android:textColorHint="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/especie_api"
-            app:layout_constraintStart_toStartOf="@+id/especie_api"
-            app:layout_constraintTop_toBottomOf="@+id/especie_api" />
-
-        <EditText
-            android:id="@+id/historia_api"
-            style="@style/Edit_Text_api"
-            android:hint="HISTÓRIA:"
-            android:textColor="@color/white"
-
-            android:textColorHint="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/veiculo_api"
-            app:layout_constraintStart_toStartOf="@+id/veiculo_api"
-            app:layout_constraintTop_toBottomOf="@+id/veiculo_api" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bt_cadastrar_api"
-            style="@style/Button"
-            android:layout_marginTop="70dp"
-            android:text="@string/cadastro"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/historia_api" />
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/bt_cadastrar_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Personagem"
+                android:textColor="@color/gold" />
+
+            <Button
+                android:id="@+id/cad_planeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="Planeta"
+                android:textColor="@color/gold" />
+
+            <Button
+                android:id="@+id/cad_nave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="NAVES"
+                android:textColor="@color/gold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey11"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PREENCHA OS DADOS E CLICK NO BOTÃO DESEJADO!"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="66dp"
+                tools:layout_editor_absoluteY="546dp" />
+        </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

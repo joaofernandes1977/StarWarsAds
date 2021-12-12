@@ -30,10 +30,10 @@
 
 
     <activity
-        android:id="@+id/nav_cadastro"
-        android:name="com.example.starwars.activityview.CadastroApi"
+        android:id="@+id/nav_personagem"
+        android:name="com.example.starwars.activityview.PersonagemActivity"
         android:label="CadastroApi"
-        tools:layout="@layout/activity_cadastro_api"/>
+        tools:layout="@layout/activity_personagem"/>
     <activity
         android:id="@+id/nav_listafilmes"
         android:name="com.example.starwars.activityview.CardViewFilmes"
@@ -55,10 +55,15 @@
         android:label="StarPrincipal"
         android:layout="@layout/activity_sair" />
     <activity
-        android:id="@+id/nav_consulta"
-        android:name="com.example.starwars.activityview.ApisJsonActivity"
+        android:id="@+id/nav_planetas"
+        android:name="com.example.starwars.activityview.PlanetaActivity"
         android:label="StarPrincipal"
-        android:layout="@layout/activity_api_json" />
+        android:layout="@layout/activity_planeta" />
+    <activity
+        android:id="@+id/nav_naves"
+        android:name="com.example.starwars.activityview.NavesActivity"
+        android:label="StarPrincipal"
+        android:layout="@layout/activity_naves" />
 
 
 </navigation>

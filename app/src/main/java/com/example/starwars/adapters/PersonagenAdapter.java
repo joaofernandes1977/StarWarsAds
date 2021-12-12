@@ -41,14 +41,12 @@ public class PersonagenAdapter extends RecyclerView.Adapter<PersonagenAdapter.My
 
     //iner class
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView id, nome, urlImage, especie, veiculo, historia;
+        TextView id, nome, urlImage, historia;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             nome = itemView.findViewById(R.id.nome_person);
             urlImage = itemView.findViewById(R.id.url_2);
-            especie = itemView.findViewById(R.id.especie);
-            veiculo = itemView.findViewById(R.id.veiculo);
             historia = itemView.findViewById(R.id.historia_4);
         }
     }

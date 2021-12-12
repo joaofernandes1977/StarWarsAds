@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
@@ -33,6 +36,9 @@ public class CardViewFilmes extends AppCompatActivity {
         getSupportActionBar().hide();
         iniciacomponentes();
 
+
+
+
         bt_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +59,10 @@ public class CardViewFilmes extends AppCompatActivity {
         FilmeAdapter adapter = new FilmeAdapter(filmes);
         recyclerFilme.setAdapter(adapter);
 
+    }
+    public void rodarVideo(View view){
+        Intent intent = new Intent(CardViewFilmes.this, PlayerVideo.class);
+        startActivity(intent);
     }
 
     public void preparaFilme(){

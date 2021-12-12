@@ -101,4 +101,9 @@ public class NavesActivity extends AppCompatActivity implements Response.Listene
         Intent intent = new Intent(NavesActivity.this, PrincipalDrawerNav.class);
         startActivity(intent);
     }
+    public  void novonave(View view){
+
+        Intent intent = new Intent(NavesActivity.this, CadastroApi.class);
+        startActivity(intent);
+    }
 }

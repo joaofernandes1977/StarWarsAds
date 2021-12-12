@@ -1,29 +1,25 @@
 package com.example.starwars.activityview;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
 import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
 import com.example.starwars.adapters.AvatarAdapter;
-import com.example.starwars.adapters.AvatarAdapter.MyViewHolder;
-import com.example.starwars.databinding.ActivityMainBinding;
 import com.example.starwars.databinding.ActivityStarAvatarBinding;
 import com.example.starwars.model.Avatar;
 import com.example.starwars.repositoryBd.AvatarRepository;
 import com.example.starwars.viewModel.AvatarViewModel;
-import com.example.starwars.viewModel.FilmeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

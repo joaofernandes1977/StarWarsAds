@@ -18,8 +18,12 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.starwars.PrincipalDrawerNav;
 import com.example.starwars.R;
+import com.example.starwars.adapters.NaveAdapter;
 import com.example.starwars.adapters.PersonagemAdapter;
+import com.example.starwars.adapters.PlanetaAdapter;
+import com.example.starwars.model.Nave;
 import com.example.starwars.model.Personagem;
+import com.example.starwars.model.Planeta;
 
 
 import org.json.JSONArray;
@@ -32,6 +36,7 @@ public class PersonagemActivity extends AppCompatActivity implements Response.Li
         Response.ErrorListener{
 
     private List<Personagem> personagens = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +56,8 @@ public class PersonagemActivity extends AppCompatActivity implements Response.Li
         JsonArrayRequest requisicao = new JsonArrayRequest(Request.Method.GET, "https://waie.com.br/json/personagem.html",
                 null, (Response.Listener<JSONArray>) this, this);
         queue.add(requisicao);
+
+
     }
 
 
@@ -82,7 +89,9 @@ public class PersonagemActivity extends AppCompatActivity implements Response.Li
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
     }
+
     public  void voltar(View view){
 
         Intent intent = new Intent(PersonagemActivity.this, ApisJsonActivity.class);
@@ -91,6 +100,10 @@ public class PersonagemActivity extends AppCompatActivity implements Response.Li
     public  void voltarHome(View view){
 
         Intent intent = new Intent(PersonagemActivity.this, PrincipalDrawerNav.class);
+        startActivity(intent);
+    }
+    public void novopersonagem(View view){
+        Intent intent = new Intent(PersonagemActivity.this, CadastroApi.class);
         startActivity(intent);
     }
     @Override
